@@ -44,5 +44,8 @@
         "single"
       ]
     }
+  },
+  "scripts": {
+    "deploy": "gulp && gulp deploy"
   }
 }

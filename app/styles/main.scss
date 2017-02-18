@@ -1,5 +1,6 @@
 // bower:scss
 // endbower
+@import 'colors';
 
 .browserupgrade {
   margin: 0.2em 0;
@@ -9,18 +10,58 @@
 }
 
 body {
-  background: #fafafa;
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  background: $c-dar;
+  font-family: 'Space Mono', monospace;
   color: #333;
+
+  a {
+    text-decoration: none;
+    color: inherit;
+    &:hover {
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  }
+
+  .colored {
+    &.dark {
+      color: $c-dar;
+    }
+    &.light {
+      color: $c-lig;
+    }
+    &.yellow {
+      color: $c-yel;
+    }
+    &.red {
+      color: $c-red;
+    }
+    &.purple {
+      color: $c-pur;
+    }
+    &.blue {
+      color: $c-blu;
+    }
+  }
 }
 
-.hero-unit {
-  margin: 50px auto 0 auto;
-  width: 300px;
+#page-header {
+  width: 600px;
+  overflow: scroll;
+  margin: 30px auto;
+  text-align: center;
+  #page-header-title {
+    margin: auto;
+  }
+}
+
+.content {
+  margin: 10px auto 0 auto;
+  width: 600px;
   font-size: 18px;
   font-weight: 200;
   line-height: 30px;
-  background-color: #eee;
+  background-color: $c-lig;
   border-radius: 6px;
   padding: 60px;
   h1 {
